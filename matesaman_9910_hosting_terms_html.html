@@ -1,149 +1,976 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hosting Terms — matesaman9910</title>
-<style>
-body{margin:0;font-family:system-ui,Segoe UI,Arial;background:#0f172a;color:#e5e7eb}
-.container{max-width:900px;margin:auto;padding:32px}
-.card{background:#111827;border:1px solid #1f2937;border-radius:12px;padding:24px;margin-bottom:20px}
-h1{margin:0 0 10px;font-size:32px}
-h2{margin-top:0;font-size:20px}
-p,li{color:#9ca3af}
-ul,ol{padding-left:20px}
-.notice{border-left:4px solid #f59e0b;padding:12px;background:#1f2937;border-radius:8px}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms & Privacy Notice — matesaman9910 Hosting</title>
+  <meta name="description" content="Terms of Use and Privacy Notice for matesaman9910's private Minecraft hosting service." />
+  <meta name="color-scheme" content="dark light" />
+  <style>
+    :root {
+      --bg: #0b1120;
+      --bg-soft: #111827;
+      --panel: #ffffff;
+      --panel-alt: #f8fafc;
+      --line: #d9e2ec;
+      --line-strong: #b8c4d3;
+      --text: #0f172a;
+      --muted: #526071;
+      --heading: #0b1b33;
+      --brand: #0f4c81;
+      --brand-2: #143b63;
+      --accent: #dbeafe;
+      --danger: #7f1d1d;
+      --danger-bg: #fef2f2;
+      --warn: #854d0e;
+      --warn-bg: #fffbeb;
+      --ok: #14532d;
+      --ok-bg: #f0fdf4;
+      --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+      --radius-sm: 12px;
+      --max: 1240px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+      min-height: 100%;
+      background: #0d1727;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: var(--sans);
+      background-color: #0d1727;
+      background-image:
+        radial-gradient(circle at top left, rgba(59,130,246,.12), transparent 25%),
+        linear-gradient(180deg, #08111d 0%, #0d1727 100%);
+      background-repeat: no-repeat;
+      color: var(--text);
+    }
+
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .shell {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 24px 80px;
+    }
+
+    .hero {
+      background: linear-gradient(145deg, rgba(8,17,29,.92), rgba(15,32,56,.95));
+      color: #f8fafc;
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 28px;
+      box-shadow: 0 30px 70px rgba(2, 8, 23, 0.35);
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 28px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -80px auto;
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(96,165,250,.14), transparent 68%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.5fr .9fr;
+      gap: 24px;
+      padding: 36px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      color: #dbeafe;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #60a5fa;
+      box-shadow: 0 0 0 5px rgba(96,165,250,.15);
+    }
+
+    h1 {
+      margin: 16px 0 14px;
+      font-size: clamp(2rem, 4vw, 3.35rem);
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+    }
+
+    .lede {
+      margin: 0;
+      max-width: 64ch;
+      color: rgba(255,255,255,.78);
+      font-size: 1.02rem;
+      line-height: 1.75;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .meta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.1);
+      color: #e2e8f0;
+      font-size: 14px;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 14px;
+      align-self: stretch;
+    }
+
+    .side-card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 20px;
+      padding: 18px 18px 16px;
+      backdrop-filter: blur(10px);
+    }
+
+    .side-card h2 {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin: 0 0 10px;
+      color: #cbd5e1;
+    }
+
+    .side-card p,
+    .side-card li {
+      margin: 0;
+      color: rgba(255,255,255,.8);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .side-card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 20px;
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(184,196,211,.7);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+      padding: 20px;
+    }
+
+    .toc h2 {
+      margin: 0 0 12px;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .toc ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 6px;
+    }
+
+    .toc a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 10px;
+      color: #1e293b;
+      font-size: 14px;
+    }
+
+    .toc a:hover,
+    .toc a:focus {
+      background: #eef4fa;
+      text-decoration: none;
+    }
+
+    .content {
+      display: grid;
+      gap: 18px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .summary-card,
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .summary-card {
+      padding: 18px;
+    }
+
+    .summary-card .label {
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .summary-card strong {
+      display: block;
+      font-size: 1.06rem;
+      color: var(--heading);
+      margin-bottom: 6px;
+    }
+
+    .summary-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .panel {
+      padding: 26px;
+    }
+
+    .panel h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.25rem, 2vw, 1.5rem);
+      line-height: 1.25;
+      color: var(--heading);
+      letter-spacing: -0.02em;
+    }
+
+    .panel h3 {
+      margin: 22px 0 10px;
+      font-size: 1rem;
+      color: var(--heading);
+    }
+
+    .panel p,
+    .panel li {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .panel p + p { margin-top: 12px; }
+    .panel ol,
+    .panel ul { padding-left: 20px; }
+    .panel li + li { margin-top: 10px; }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .section-num {
+      width: 40px;
+      height: 40px;
+      flex: 0 0 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: #edf4fb;
+      color: var(--brand-2);
+      font-weight: 800;
+      font-size: 14px;
+      border: 1px solid #d9e8f7;
+    }
+
+    .callout {
+      border-radius: 16px;
+      padding: 16px 18px;
+      border: 1px solid transparent;
+      margin: 16px 0;
+    }
+
+    .callout strong { color: inherit; }
+    .callout p { margin: 0; }
+    .callout + .callout { margin-top: 12px; }
+
+    .callout.warn {
+      background: var(--warn-bg);
+      border-color: #fde68a;
+      color: var(--warn);
+    }
+
+    .callout.ok {
+      background: var(--ok-bg);
+      border-color: #bbf7d0;
+      color: var(--ok);
+    }
+
+    .callout.danger {
+      background: var(--danger-bg);
+      border-color: #fecaca;
+      color: var(--danger);
+    }
+
+    .definition-table,
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: var(--panel-alt);
+    }
+
+    .definition-table th,
+    .definition-table td,
+    .info-table th,
+    .info-table td {
+      text-align: left;
+      vertical-align: top;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .definition-table th,
+    .info-table th {
+      width: 28%;
+      color: var(--heading);
+      background: #f4f8fb;
+      font-weight: 700;
+    }
+
+    .definition-table tr:last-child th,
+    .definition-table tr:last-child td,
+    .info-table tr:last-child th,
+    .info-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .footer {
+      margin-top: 28px;
+      background: #0d1727;
+      color: rgba(255,255,255,.8);
+      border-radius: 24px;
+      padding: 24px 26px;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 18px;
+    }
+
+    .footer h2 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      color: #ffffff;
+    }
+
+    .footer p,
+    .footer li {
+      margin: 0;
+      color: rgba(255,255,255,.76);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .footer ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .fineprint {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      color: rgba(255,255,255,.6);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .utility-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .utility-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.8);
+      color: var(--heading);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .utility-link:hover { text-decoration: none; background: #fff; }
+
+    code.inline {
+      font-family: var(--mono);
+      font-size: 13px;
+      background: #eff6ff;
+      color: #12345a;
+      border: 1px solid #dbeafe;
+      padding: 2px 7px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 1080px) {
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; order: -1; }
+      .summary-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero-grid { padding: 28px; }
+    }
+
+    @media (max-width: 640px) {
+      .shell { padding: 18px 14px 56px; }
+      .hero-grid { padding: 22px; }
+      .panel { padding: 20px; }
+      .summary-grid { grid-template-columns: 1fr; }
+      .definition-table,
+      .info-table,
+      .definition-table tbody,
+      .info-table tbody,
+      .definition-table tr,
+      .info-table tr,
+      .definition-table th,
+      .definition-table td,
+      .info-table th,
+      .info-table td {
+        display: block;
+        width: 100%;
+      }
+      .definition-table th,
+      .info-table th {
+        border-bottom: none;
+        padding-bottom: 4px;
+      }
+      .definition-table td,
+      .info-table td {
+        padding-top: 0;
+      }
+      .utility-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        color: #000000;
+      }
+      .shell { max-width: none; padding: 0; }
+      .hero,
+      .summary-card,
+      .panel,
+      .toc,
+      .footer {
+        box-shadow: none;
+        border-color: #c9d2dc;
+      }
+      .toc { display: none; }
+      .utility-row { display: none; }
+      a { color: #000000; text-decoration: underline; }
+    }
+  </style>
 </head>
 <body>
-<div class="container">
+  <div class="shell">
+    <header class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Private Hosting Documentation</div>
+          <h1>Terms of Use &amp; Privacy Notice</h1>
+          <p class="lede">
+            This page sets out the operating terms for <strong>matesaman9910's Hosting Services</strong>, a private, friends-first Minecraft hosting service.
+            It is designed to be clear, professional, and realistic about what is and is not provided.
+          </p>
+          <div class="hero-meta">
+            <span class="meta-pill"><strong>Service model:</strong>&nbsp; Free / non-commercial</span>
+            <span class="meta-pill"><strong>Audience:</strong>&nbsp; Friends and small private groups</span>
+            <span class="meta-pill"><strong>Version:</strong>&nbsp; v2.0</span>
+            <span class="meta-pill"><strong>Last updated:</strong>&nbsp; 23 April 2026</span>
+          </div>
+        </div>
+        <aside class="hero-side" aria-label="Quick facts">
+          <section class="side-card">
+            <h2>Key service points</h2>
+            <ul>
+              <li>Servers are <strong>not</strong> 24/7 by default.</li>
+              <li>Requests do not create an automatic entitlement to service.</li>
+              <li>Heavy or unstable setups may be limited, paused, or removed.</li>
+            </ul>
+          </section>
+          <section class="side-card">
+            <h2>Primary contact</h2>
+            <p>
+              <strong>Operator:</strong> matesaman9910<br />
+              <strong>Email:</strong> <a href="mailto:matesaman9910@gmail.com" style="color:#bfdbfe">matesaman9910@gmail.com</a><br />
+              <strong>Jurisdiction reference:</strong> Czech Republic
+            </p>
+          </section>
+        </aside>
+      </div>
+    </header>
 
-<div class="card">
-<h1>Terms & Conditions</h1>
-<p>Service provided by <strong>matesaman9910</strong></p>
-</div>
+    <div class="layout">
+      <nav class="toc" aria-label="Table of contents">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#definitions">Definitions</a></li>
+          <li><a href="#service-nature">Nature of the service</a></li>
+          <li><a href="#request-acceptance">Requests and acceptance</a></li>
+          <li><a href="#availability">Availability and operations</a></li>
+          <li><a href="#fair-use">Fair use and technical limits</a></li>
+          <li><a href="#user-responsibilities">User responsibilities</a></li>
+          <li><a href="#access-security">Access and security</a></li>
+          <li><a href="#mods-plugins">Mods, plugins, and third parties</a></li>
+          <li><a href="#backups-data">Backups, data, and retention</a></li>
+          <li><a href="#support">Support</a></li>
+          <li><a href="#suspension">Suspension and termination</a></li>
+          <li><a href="#liability">Liability and disclaimers</a></li>
+          <li><a href="#privacy">Privacy notice</a></li>
+          <li><a href="#contact">Contact and updates</a></li>
+        </ol>
+      </nav>
 
-<div class="card notice">
-<strong>Important:</strong> This is a private, non-commercial hosting service intended for friends and small communities. It operates on a best-effort basis and does not guarantee availability, performance, or data safety.
-</div>
+      <main class="content">
+        <div class="utility-row">
+          <a class="utility-link" href="#privacy">Jump to Privacy Notice</a>
+          <a class="utility-link" href="javascript:window.print()">Print / Save as PDF</a>
+        </div>
 
-<div class="card">
-<h2>1) Nature of Service</h2>
-<ol>
-<li>This is a free, non-commercial hosting service.</li>
-<li>Submitting a request does not guarantee server creation.</li>
-<li>The provider may accept, reject, or modify requests at any time.</li>
-</ol>
-</div>
+        <section class="summary-grid" aria-label="Quick summary">
+          <article class="summary-card">
+            <span class="label">Service scope</span>
+            <strong>Private Minecraft hosting</strong>
+            <p>Managed on a limited-capacity basis for friends, test servers, and small communities.</p>
+          </article>
+          <article class="summary-card">
+            <span class="label">Availability</span>
+            <strong>Best-effort only</strong>
+            <p>No SLA, no guaranteed uptime, and no promise of permanent availability.</p>
+          </article>
+          <article class="summary-card">
+            <span class="label">Risk posture</span>
+            <strong>Use at your own risk</strong>
+            <p>Data loss, downtime, instability, or service removal can happen without compensation.</p>
+          </article>
+          <article class="summary-card">
+            <span class="label">Data handling</span>
+            <strong>Minimal by design</strong>
+            <p>Only basic request and operational data should be collected to run and secure the service.</p>
+          </article>
+        </section>
 
-<div class="card">
-<h2>2) Availability</h2>
-<ol>
-<li>Servers are not 24/7.</li>
-<li>Servers start manually or upon request.</li>
-<li>Servers may be stopped at any time.</li>
-<li>No uptime guarantees are provided.</li>
-</ol>
-</div>
+        <section class="panel" id="overview">
+          <div class="section-head">
+            <div class="section-num">01</div>
+            <h2>Overview</h2>
+          </div>
+          <p>
+            These Terms of Use and this Privacy Notice apply to the private hosting service operated under the name
+            <strong>matesaman9910's Hosting Services</strong>. By submitting a server request, asking for a server to be configured,
+            accessing a panel or dashboard, or using a hosted server, you acknowledge and accept the terms on this page.
+          </p>
+          <div class="callout warn">
+            <p><strong>Important:</strong> This is a private, non-commercial, limited-capacity service. It is not a substitute for a professional hosting provider and is not suitable for business, production, or critical use.</p>
+          </div>
+          <p>
+            The page also includes a structured privacy notice because the request workflow may involve personal data such as names,
+            email addresses, server-contact details, IP logs, or operational metadata.
+          </p>
+        </section>
 
-<div class="card">
-<h2>3) Performance</h2>
-<ol>
-<li>Performance depends on configuration, mods, and usage.</li>
-<li>Heavy or unstable setups may be restricted or removed.</li>
-<li>No performance guarantees are provided.</li>
-</ol>
-</div>
+        <section class="panel" id="definitions">
+          <div class="section-head">
+            <div class="section-num">02</div>
+            <h2>Definitions</h2>
+          </div>
+          <table class="definition-table" aria-label="Definitions">
+            <tbody>
+              <tr>
+                <th>Provider / Operator</th>
+                <td>The individual operating this private hosting service under the name <strong>matesaman9910</strong>.</td>
+              </tr>
+              <tr>
+                <th>Service</th>
+                <td>The setup, hosting, management, or limited support of Minecraft servers and related tools or dashboards.</td>
+              </tr>
+              <tr>
+                <th>User</th>
+                <td>Any person who submits a request, receives server access, manages a hosted server, or otherwise uses the service.</td>
+              </tr>
+              <tr>
+                <th>Server request</th>
+                <td>A request submitted through a form, message, or other agreed channel asking for a new server or changes to an existing one.</td>
+              </tr>
+              <tr>
+                <th>Operational data</th>
+                <td>Technical information needed to run, secure, or troubleshoot the service, such as timestamps, status logs, IP records, or crash diagnostics.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
 
-<div class="card">
-<h2>4) Fair Use</h2>
-<ol>
-<li>Servers must not excessively consume system resources.</li>
-<li>Abusive or unstable servers may be limited or terminated.</li>
-</ol>
-</div>
+        <section class="panel" id="service-nature">
+          <div class="section-head">
+            <div class="section-num">03</div>
+            <h2>Nature of the service</h2>
+          </div>
+          <ol>
+            <li>The service is provided <strong>free of charge</strong> and on a personal, non-commercial basis.</li>
+            <li>The service is intended primarily for friends, known users, private groups, community experiments, and similar small-scale use.</li>
+            <li>No commercial SLA, uptime promise, refund regime, business continuity undertaking, or enterprise support commitment is offered.</li>
+            <li>The provider may decide what server types, versions, software stacks, or requests are supported at any given time.</li>
+          </ol>
+        </section>
 
-<div class="card">
-<h2>5) User Responsibility</h2>
-<ol>
-<li>You are responsible for your server and its users.</li>
-<li>Admin/operator actions are your responsibility.</li>
-<li>Illegal or harmful activity is prohibited.</li>
-</ol>
-</div>
+        <section class="panel" id="request-acceptance">
+          <div class="section-head">
+            <div class="section-num">04</div>
+            <h2>Requests and acceptance</h2>
+          </div>
+          <ol>
+            <li>Submitting a request does <strong>not</strong> guarantee that a server will be created.</li>
+            <li>A request may be accepted, declined, delayed, returned for clarification, or modified before setup.</li>
+            <li>The provider may refuse requests that are technically unsuitable, excessively resource-intensive, legally risky, or inconsistent with the private nature of the service.</li>
+            <li>Changes requested after approval may be postponed or declined if they materially change the workload or technical risk.</li>
+          </ol>
+          <div class="callout ok">
+            <p><strong>Practical meaning:</strong> the form is a request intake tool, not an automated provisioning system and not a contractual acceptance mechanism.</p>
+          </div>
+        </section>
 
-<div class="card">
-<h2>6) Mods & Plugins</h2>
-<ol>
-<li>Use at your own risk.</li>
-<li>No compatibility or stability guarantees.</li>
-</ol>
-</div>
+        <section class="panel" id="availability">
+          <div class="section-head">
+            <div class="section-num">05</div>
+            <h2>Availability and operations</h2>
+          </div>
+          <ol>
+            <li>Servers are <strong>not 24/7 by default</strong>.</li>
+            <li>Servers may be started manually by the provider or through approved start methods where such functionality is made available.</li>
+            <li>Servers may be stopped because of inactivity, maintenance, host availability, operating cost, technical issues, or resource pressure.</li>
+            <li>No uninterrupted availability, low latency, tick stability, throughput, or response time is guaranteed.</li>
+            <li>Maintenance, restarts, migration, version changes, or emergency interventions may occur without prior notice where reasonably necessary.</li>
+          </ol>
+          <div class="callout danger">
+            <p><strong>No uptime commitment:</strong> if a server is offline, unstable, or unavailable, that does not create any right to compensation, restoration priority, or continuation of service.</p>
+          </div>
+        </section>
 
-<div class="card">
-<h2>7) Data & Backups</h2>
-<ol>
-<li>Backups are not guaranteed.</li>
-<li>Data may be lost or deleted at any time.</li>
-<li>No recovery is guaranteed.</li>
-</ol>
-</div>
+        <section class="panel" id="fair-use">
+          <div class="section-head">
+            <div class="section-num">06</div>
+            <h2>Fair use and technical limits</h2>
+          </div>
+          <ol>
+            <li>The service operates on shared, limited infrastructure and therefore depends on reasonable resource use.</li>
+            <li>Servers must not excessively consume CPU, RAM, disk, bandwidth, or administrative attention compared with the nature of the request.</li>
+            <li>The provider may throttle, reconfigure, pause, optimize, restart, or permanently remove a server that creates instability, excessive load, or disproportionate maintenance burden.</li>
+            <li>Examples of elevated-risk setups include very heavy modpacks, extreme chunk generation, runaway automation, broken plugins, or malicious traffic.</li>
+          </ol>
+        </section>
 
-<div class="card">
-<h2>8) Inactivity</h2>
-<ol>
-<li>Inactive servers may be removed.</li>
-<li>Data may be deleted without notice.</li>
-</ol>
-</div>
+        <section class="panel" id="user-responsibilities">
+          <div class="section-head">
+            <div class="section-num">07</div>
+            <h2>User responsibilities</h2>
+          </div>
+          <ol>
+            <li>You are responsible for the content, conduct, and administrative decisions associated with your server.</li>
+            <li>You must provide accurate contact details if you want the service to be managed reliably.</li>
+            <li>You must not use the service for unlawful activity, malware delivery, credential theft, network abuse, targeted harassment, hate content, doxxing, or similar misuse.</li>
+            <li>You are responsible for ensuring that any content, mod files, maps, or plugins you upload may lawfully be used by you.</li>
+            <li>You must comply with applicable game terms, license rules, and local law.</li>
+          </ol>
+        </section>
 
-<div class="card">
-<h2>9) Support</h2>
-<ol>
-<li>Support is best-effort only.</li>
-<li>No guaranteed response time.</li>
-</ol>
-</div>
+        <section class="panel" id="access-security">
+          <div class="section-head">
+            <div class="section-num">08</div>
+            <h2>Access and security</h2>
+          </div>
+          <ol>
+            <li>Users are responsible for the administrators, operators, moderators, or panel users they nominate.</li>
+            <li>The provider is not responsible for damage caused by accounts or permissions granted at the user’s request.</li>
+            <li>Access may be limited, rotated, revoked, or suspended where necessary to protect the infrastructure, the service, or other users.</li>
+            <li>Users should report suspected compromise, abuse, or unauthorized access promptly.</li>
+          </ol>
+        </section>
 
-<div class="card">
-<h2>10) Suspension</h2>
-<ol>
-<li>Servers may be suspended or terminated at any time.</li>
-<li>Reasons include misuse, instability, or resource limits.</li>
-</ol>
-</div>
+        <section class="panel" id="mods-plugins">
+          <div class="section-head">
+            <div class="section-num">09</div>
+            <h2>Mods, plugins, and third-party services</h2>
+          </div>
+          <ol>
+            <li>Mods, plugins, datapacks, forks, and external integrations are used at the user’s own risk.</li>
+            <li>The provider does not guarantee compatibility, maintenance, update support, security, or long-term viability of third-party software.</li>
+            <li>The service may rely on third-party tools or platforms for hosting operations, forms, email handling, dashboards, tunneling, access control, or monitoring.</li>
+            <li>Where third-party services are used, their own terms and privacy practices may also apply.</li>
+          </ol>
+        </section>
 
-<div class="card">
-<h2>11) Liability</h2>
-<ol>
-<li>Service is provided "as is".</li>
-<li>No liability for data loss, downtime, or issues.</li>
-<li>Use is at your own risk.</li>
-</ol>
-</div>
+        <section class="panel" id="backups-data">
+          <div class="section-head">
+            <div class="section-num">10</div>
+            <h2>Backups, data, and retention</h2>
+          </div>
+          <ol>
+            <li>Backups are not guaranteed unless they have been explicitly arranged.</li>
+            <li>Even where backups exist, successful restoration is not guaranteed.</li>
+            <li>Worlds, configurations, logs, or uploaded files may be lost because of crashes, corruption, software failure, platform issues, operator error, or malicious activity.</li>
+            <li>Users remain responsible for keeping their own copies of important data.</li>
+            <li>Inactive or terminated servers may have their files deleted without notice.</li>
+            <li>The provider is not obliged to recover broken worlds, damaged configurations, deleted files, or historic states of a server.</li>
+          </ol>
+          <div class="callout warn">
+            <p><strong>Recommended practice:</strong> if a server matters to you, keep your own offline copy of the world, mods, plugins, and configuration files.</p>
+          </div>
+        </section>
 
-<div class="card">
-<h2>12) Privacy</h2>
-<ol>
-<li>Only necessary data is collected.</li>
-<li>Basic logs may be stored for operation.</li>
-<li>No data is sold or used commercially.</li>
-</ol>
-</div>
+        <section class="panel" id="support">
+          <div class="section-head">
+            <div class="section-num">11</div>
+            <h2>Support</h2>
+          </div>
+          <ol>
+            <li>Support is provided on a best-effort basis only.</li>
+            <li>No guaranteed response time, turnaround time, or availability window applies.</li>
+            <li>Basic setup help and reasonable troubleshooting may be provided, but advanced diagnostics, extensive optimization, custom development, or repeated repair work may be declined.</li>
+            <li>Support priority remains entirely at the provider’s discretion.</li>
+          </ol>
+        </section>
 
-<div class="card">
-<h2>13) Changes</h2>
-<ol>
-<li>Terms may be updated at any time.</li>
-<li>Latest version is always valid.</li>
-</ol>
-</div>
+        <section class="panel" id="suspension">
+          <div class="section-head">
+            <div class="section-num">12</div>
+            <h2>Suspension and termination</h2>
+          </div>
+          <ol>
+            <li>The provider may suspend, pause, or terminate any server or access right at any time.</li>
+            <li>Reasons may include misuse, instability, inactivity, infrastructure pressure, administrative burden, legal concern, or simple discontinuation of the service.</li>
+            <li>Termination may occur without any obligation to preserve data, continue hosting, or maintain access.</li>
+            <li>Users may request discontinuation of their own server at any time.</li>
+          </ol>
+        </section>
 
-<div class="card">
-<h2>Acceptance</h2>
-<p>By submitting a request or using the service, you agree to these Terms.</p>
-</div>
+        <section class="panel" id="liability">
+          <div class="section-head">
+            <div class="section-num">13</div>
+            <h2>Liability and disclaimers</h2>
+          </div>
+          <ol>
+            <li>The service is provided <strong>as is</strong> and <strong>as available</strong>.</li>
+            <li>No warranty is given regarding uptime, availability, suitability, fitness for a particular purpose, continuity, data preservation, or technical outcome.</li>
+            <li>To the maximum extent permitted by applicable law, the provider is not liable for downtime, data loss, corrupted worlds, security incidents, plugin failures, user error, moderator abuse, or indirect consequences of service interruption.</li>
+            <li>Use of the service is entirely at the user’s own risk.</li>
+          </ol>
+        </section>
 
-</div>
+        <section class="panel" id="privacy">
+          <div class="section-head">
+            <div class="section-num">14</div>
+            <h2>Privacy notice</h2>
+          </div>
+          <p>
+            This privacy notice explains what personal data may be processed in connection with the request and operation of the service,
+            why it is processed, and what rights users may have.
+          </p>
+
+          <table class="info-table" aria-label="Privacy notice summary">
+            <tbody>
+              <tr>
+                <th>Controller</th>
+                <td>matesaman9910 (private operator of the service)</td>
+              </tr>
+              <tr>
+                <th>Contact</th>
+                <td><a href="mailto:matesaman9910@gmail.com">matesaman9910@gmail.com</a></td>
+              </tr>
+              <tr>
+                <th>Location reference</th>
+                <td>Czech Republic</td>
+              </tr>
+              <tr>
+                <th>Data Protection Officer</th>
+                <td>No Data Protection Officer is designated for this private service.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Categories of data that may be processed</h3>
+          <ul>
+            <li>contact details submitted by the user, such as name, email address, or other agreed contact identifier;</li>
+            <li>request details, including server name, requested version, software type, plugin or mod requirements, and access preferences;</li>
+            <li>operational and security records, such as timestamps, status logs, IP-related access records, crash logs, or administrative activity needed to run or protect the service;</li>
+            <li>communications sent by email, message, or request form in connection with hosting support.</li>
+          </ul>
+
+          <h3>Purposes of processing</h3>
+          <ul>
+            <li>to review and respond to server requests;</li>
+            <li>to configure, operate, secure, maintain, or troubleshoot hosted servers;</li>
+            <li>to manage access rights, logging, and abuse prevention;</li>
+            <li>to communicate with users about server status, problems, or changes.</li>
+          </ul>
+
+          <h3>Legal basis</h3>
+          <ul>
+            <li><strong>Voluntary submission / consent-type basis:</strong> where a user deliberately submits request details and contact information to be contacted about hosting.</li>
+            <li><strong>Legitimate operational interest:</strong> where limited technical logs or access data are needed to keep the service functioning, secure, and manageable.</li>
+          </ul>
+
+          <h3>Recipients or categories of recipients</h3>
+          <ul>
+            <li>the provider/operator personally;</li>
+            <li>technical platforms reasonably used to run the service, such as hosting infrastructure, dashboards, email providers, request-form platforms, or security tools;</li>
+            <li>public authorities only where disclosure is legally required.</li>
+          </ul>
+
+          <h3>Retention</h3>
+          <ul>
+            <li>request and contact data should be kept only for as long as reasonably necessary to manage the requested service or related follow-up;</li>
+            <li>operational and security logs may be kept for a limited period needed for troubleshooting, abuse prevention, or system maintenance;</li>
+            <li>data may be deleted earlier if no longer needed, or later if reasonably required to resolve an issue or protect the service.</li>
+          </ul>
+
+          <h3>Your rights</h3>
+          <p>Subject to applicable law and the nature of the processing, users may have the right to:</p>
+          <ul>
+            <li>be informed about the processing of their personal data;</li>
+            <li>request access to their personal data;</li>
+            <li>request rectification of inaccurate data;</li>
+            <li>request erasure where appropriate;</li>
+            <li>request restriction of processing in certain cases;</li>
+            <li>object to certain processing;</li>
+            <li>request portability where legally applicable;</li>
+            <li>lodge a complaint with a competent data protection authority.</li>
+          </ul>
+
+          <h3>Complaints</h3>
+          <p>
+            If you believe your personal data has been handled improperly, you may contact the provider first using the contact details above.
+            You may also lodge a complaint with the competent supervisory authority in the Czech Republic, the
+            <strong>Office for Personal Data Protection (Úřad pro ochranu osobních údajů)</strong>.
+          </p>
+
+          <h3>Transfers and automated decision-making</h3>
+          <ul>
+            <li>No intentional automated decision-making is used to make legally significant decisions about users.</li>
+            <li>Some service tools may be operated by third-party providers and could involve infrastructure outside the EEA depending on the platforms used.</li>
+          </ul>
+        </section>
+
+        <section class="panel" id="contact">
+          <div class="section-head">
+            <div class="section-num">15</div>
+            <h2>Contact and updates</h2>
+          </div>
+          <p>
+            Questions about these terms, server operation, or privacy handling may be sent to
+            <a href="mailto:matesaman9910@gmail.com">matesaman9910@gmail.com</a>.
+          </p>
+          <p>
+            These terms may be updated from time to time. The latest published version on this page is the controlling version for future use of the service.
+          </p>
+          <div class="callout ok">
+            <p><strong>Current publication status:</strong> Version 2.0 &mdash; last updated 23 April 2026.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <h2>Document purpose</h2>
+          <p>
+            This page is intended to set clear operational boundaries, reduce misunderstandings, and provide a practical privacy notice for a private hosting setup.
+            It is written to be concise, readable, and usable in a real intake workflow.
+          </p>
+        </div>
+        <div>
+          <h2>Quick references</h2>
+          <ul>
+            <li><a href="#availability" style="color:#bfdbfe">Availability and operations</a></li>
+            <li><a href="#backups-data" style="color:#bfdbfe">Backups and data retention</a></li>
+            <li><a href="#privacy" style="color:#bfdbfe">Privacy notice</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="fineprint">
+        © <span id="year"></span> matesaman9910. All rights reserved. This page applies to the private service described above and should be updated if the service model, tooling, or data handling materially changes.
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
